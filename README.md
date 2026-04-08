@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# You Are Not Alone — Global Mental Health Support
 
-## Getting Started
+A free, anonymous mental health crisis support website built with Next.js and deployed on Vercel.
 
-First, run the development server:
+## Features
+
+- **Anonymous contact form** — send a message without sharing your name or email
+- **Crisis hotlines for 50+ countries** — organized by region
+- **WhatsApp button** — direct chat link (configure your number in env vars)
+- **Calm teal/green design** — mobile-first, accessible
+- **Email delivery via Resend** — contact form messages go straight to your inbox
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Home — hero, features, privacy section |
+| `/hotlines` | Crisis hotlines by country (50+ countries) |
+| `/contact` | Anonymous contact form |
+| `/about` | Mission, privacy commitment, disclaimer |
+
+## Setup
+
+### 1. Clone & install
+
+```bash
+git clone https://github.com/ehansih/mentalhealth-site
+cd mentalhealth-site
+npm install
+```
+
+### 2. Configure environment variables
+
+```bash
+cp .env.example .env.local
+```
+
+Edit `.env.local`:
+
+```env
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx   # from resend.com
+CONTACT_EMAIL=your@email.com             # where messages are sent
+FROM_EMAIL=noreply@yourdomain.com        # must be verified in Resend
+NEXT_PUBLIC_WHATSAPP_NUMBER=447911123456 # digits only, with country code
+```
+
+### 3. Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Deploy to Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+vercel --prod
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Add the environment variables in the Vercel dashboard under **Settings → Environment Variables**.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 16** (App Router)
+- **Tailwind CSS** + **shadcn/ui** (base-ui)
+- **Resend** for transactional email
+- **Vercel** for hosting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — free to use, adapt, and share.
