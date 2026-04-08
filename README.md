@@ -6,6 +6,22 @@
 
 ---
 
+## Screenshots
+
+![Home](public/screenshots/home.png)
+
+![AI Chat](public/screenshots/chat.png)
+
+![Mental Health Check-In](public/screenshots/assessment.png)
+
+![Breathing Exercises](public/screenshots/breathing.png)
+
+![Safety Plan Builder](public/screenshots/safety-plan.png)
+
+![Crisis Hotlines](public/screenshots/hotlines.png)
+
+---
+
 ## What is Haven?
 
 Haven is a safe space for people who are struggling. No sign-up. No cost. No data collected. Everything is completely anonymous.
