@@ -9,9 +9,10 @@ import { Button } from "@/components/ui/button";
 const links = [
   { href: "/", label: "Home" },
   { href: "/chat", label: "Chat with Haven" },
+  { href: "/breathing", label: "Breathing" },
+  { href: "/safety-plan", label: "Safety Plan" },
   { href: "/hotlines", label: "Crisis Hotlines" },
   { href: "/contact", label: "Contact" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
